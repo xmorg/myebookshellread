@@ -1,4 +1,4 @@
-# myebookshellread - a command line ebook reader shell script and now, a C version too
+# myebookshellread - a command line ebook reader
 
 An very lightweight (just a shell script — and now optionally C!) ebook reader that can
 use either espeak, espeak-ng, or flite TTS.
@@ -61,6 +61,8 @@ The new C version has the same interface, minus shellisms:
 ```
 
 ## Changing your TTS in C. 
+
+type make to make the project.
 
 Look for the following code and change it accordingly, then recompile (the suckless way).  Note, that you can also chagne espeak's voice if you need to do so.
 
