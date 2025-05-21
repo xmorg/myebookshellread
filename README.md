@@ -11,8 +11,7 @@ No interpreters. No dependencies. No excuses.
 The original `ebookreader.sh` is still included for shell lovers, tinkerers, and graybeards running Plan 9 or busybox on a toaster.
 
 ## requirements:
-	espeak  - for reading out loud, however could also use flite
-	          by changing the variable at the top of the script
+	espeak  - for reading out loud, however could also use flite by changing the variable at the top of the script
 	awk     - most shells/distros have this
 	a shell - tested in bash, sh, yash, dash
 
@@ -58,6 +57,22 @@ The new C version has the same interface, minus shellisms:
 
 ```sh
 ./myebookreader FILE [BOOKMARK] [man|noconv]
+
+```
+
+## Changing your TTS in C. 
+
+Look for the following code and change it accordingly, then recompile (the suckless way).  Note, that you can also chagne espeak's voice if you need to do so.
+
+```
+#define ESPEAK_COMMAND "/usr/bin/espeak -v f4 -p85"
+
+/*
+#ESPEAKCOMMAND="/usr/bin/flite"
+#ESPEAKCOMMAND="/usr/bin/espeak-ng" #the new one.
+#ESPEAKCOMMAND="/data/data/com.termux/files/usr/bin/espeak"
+*/
+```
 
 This project is dedicated to Jos Lemmens, creator of ebook-speaker.
 While this script shares no code with the original, it shares the same spirit — a quick, minimal, and accessible way to read text aloud and save your place via a bookmark.
