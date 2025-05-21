@@ -8,6 +8,12 @@
 #define BOOKMARK_EXT ".bookmark"
 #define ESPEAK_COMMAND "/usr/bin/espeak -v f4 -p85"
 
+/*
+#ESPEAKCOMMAND="/usr/bin/flite"
+#ESPEAKCOMMAND="/usr/bin/espeak-ng" #the new one.
+#ESPEAKCOMMAND="/data/data/com.termux/files/usr/bin/espeak"
+*/
+
 void cleanup_tmp() {
     remove(TMPFILE);
 }
