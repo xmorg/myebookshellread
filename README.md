@@ -50,8 +50,16 @@ Examples:
 	ebookreader.sh ls 1 man
 	ebookreader.sh war_and_peace.txt 5000
 
+
+ 
+
 ## Usage (C):
 The new C version has the same interface, minus shellisms:
 
 ```sh
 ./myebookreader FILE [BOOKMARK] [man|noconv]
+
+This project is dedicated to Jos Lemmens, creator of ebook-speaker.
+While this script shares no code with the original, it shares the same spirit — a quick, minimal, and accessible way to read text aloud and save your place via a bookmark.
+
+Designed for extreme portability, it requires only a shell, awk, seq, and espeak — though you can swap in any TTS engine that accepts piped input.
